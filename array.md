@@ -559,6 +559,8 @@ if let directorIndex = schoolMembers.firstIndex(where: { person in
 
 Более подробно про опционалы мы уже говорили здесь (НЕ ЗАБЫТЬ ДОБАВИТЬ ССЫЛКУ)
 
+---
+
 ## Проверь себя! ✍️
 
 ### Вопрос 1
@@ -655,78 +657,6 @@ print(result)
 - [x] `array.insert(10, at: 0)`
 - [ ] `array.prepend(10)`
 
-## Шпаргалка 📝
-
-| Действие | Код |
-|----------|-----|
-| Пустой массив | `var array: [Int] = []` |
-| С данными | `let array = [1, 2, 3]` |
-| В конец | `array.append(4)` |
-| В начало | `array.insert(0, at: 0)` |
-| Удалить по индексу | `array.remove(at: 2)` |
-| Удалить первый | `array.removeFirst()` |
-| Удалить последний | `array.removeLast()` |
-| Проверить наличие | `array.contains(5)` |
-| Найти индекс | `array.firstIndex(of: 3)` |
-| Отсортировать | `array.sorted()` |
-| Количество | `array.count` |
-| Проверить пустоту | `array.isEmpty` |
-| Первый элемент | `array.first` |
-| Последний элемент | `array.last` |
-
----
-
-## Частые ошибки новичков ⚠️
-
-### Ошибка 1: Забывают про индекс 0
-```swift
-let array = [10, 20, 30]
-let first = array[1] // ❌ Это ВТОРОЙ элемент!
-let correct = array[0] // ✅ Первый элемент
-```
-
-### Ошибка 2: Не проверяют границы
-```swift
-let array = [1, 2, 3]
-let element = array[5] // 💥 Crash!
-
-// ✅ Безопасно:
-if array.count > 5 {
-    let element = array[5]
-}
-```
-
-### Ошибка 3: Пытаются изменить let-массив
-```swift
-let array = [1, 2, 3]
-array.append(4) // ❌ Ошибка!
-
-// ✅ Надо использовать var
-var mutableArray = [1, 2, 3]
-mutableArray.append(4) // ✅
-```
-
-### Ошибка 4: Путают append и insert
-```swift
-var array = [1, 2, 3]
-array.append(0)    // [1, 2, 3, 0] (в конец)
-array.insert(0, at: 0) // [0, 1, 2, 3] (в начало)
-```
-
-### Ошибка 5: Забывают про Optional
-```swift
-let emptyArray: [Int] = []
-let first = emptyArray.first! // 💥 Crash!
-
-// ✅ Безопасно:
-if let first = emptyArray.first {
-    print(first)
-}
-```
-
----
-
-> 📘 **Документация**: [Официальная документация Apple по массивам](https://developer.apple.com/documentation/swift/array)
 
 ## Шпаргалка 📝
 
